@@ -1,0 +1,8 @@
+package board;
+
+
+@SpringBootTest
+class BoardApplicationTests {
+
+
+}
