@@ -1,1 +1,1 @@
-java -jar board-1.0-SNAPSHOT.jar
+java -jar target\board-1.0-SNAPSHOT.jar
