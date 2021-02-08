@@ -23,14 +23,15 @@ pipeline
     	     }
     	}
         
-        stage('build') 
-        {
-            steps {
-            	sh 'pwd'
-                sh 'mvn -f pom.xml clean install -P release'
-              	archive '**/target/*.jar'
-            }
-        }
+    stage('Build') {
+        sh "'${mvnHome}/bin/mvn' -P ${activeProfile} -Dmaven.test.skip=true clean install"
+    }
+    stage('Archive') {
+        archive '**/target/*.jar'
+    }
+    stage('Deploy') {
+        echo "Deploy is not yet implemented"
+    }
         
 }
 }
