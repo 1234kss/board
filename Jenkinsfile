@@ -27,7 +27,7 @@ pipeline
         {
             steps {
             	sh 'pwd'
-                sh 'mvn -f automanWebapp/pom.xml clean install -P release'
+                sh 'mvn -f pom.xml clean install -P release'
               	archive '**/target/*.jar'
             }
         }
