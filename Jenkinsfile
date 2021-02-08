@@ -10,7 +10,7 @@ pipeline
     		steps
     		{
     			 echo "Current workspace : ${workspace}"
-    			 sh 'mvn -version'
+    			 bat 'mvn -version'
     		}
     	}
     	stage('clone project')
@@ -26,7 +26,7 @@ pipeline
        {
             steps
     		{
-                 sh 'mvn compile'
+                 bat 'mvn compile'
     	     }
     	}
         
