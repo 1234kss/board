@@ -36,6 +36,14 @@ pipeline
                  bat 'mvn package'
     	     }
     	}
+ 
+    	stage('deploy')
+       {
+            steps
+    		{
+                 bat 'run.bat'
+    	     }
+    	}
         
      }
 }
