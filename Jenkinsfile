@@ -5,6 +5,13 @@ pipeline
         maven 'M3' 
     }
     stages {
+    	stage('clean')
+       {
+            steps
+    		{
+                 bat 'mvn clean'
+    	     }
+    	}
     	stage('parameter check')
     	{
     		steps
